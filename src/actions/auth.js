@@ -13,8 +13,8 @@ export const startLoginEmailPassword = (email,password) => {
 export const startGoogleLogin = () => {
     return (dispatch) => {
         firebase.auth().signInWithPopup(googleAuthProvider)
-            .then(userCred => {
-                console.log(userCred);
+            .then( ({user})  => {
+                dispatch(login(user.uid,user.displayName));
             });
     }
 }
