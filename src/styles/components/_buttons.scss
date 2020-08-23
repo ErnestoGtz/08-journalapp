@@ -28,6 +28,16 @@
             background-color: darken($color: $primary, $amount: 15);
         }
     }
+
+    &-danger {
+        background-color: red;
+        transition: all .3s ease;
+        &:hover {
+            background-color: darken($color: red, $amount: 20);
+        }
+            
+        
+    }
 }
 
 .btn-block {
