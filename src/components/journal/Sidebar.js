@@ -10,7 +10,6 @@ export const Sidebar = () => {
     const {name} = useSelector(state => state.auth);
 
     const handleLogout = () =>{
-        console.log('click');
         dispatch(startLogout());
     }
 
